@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Type;
+use Faker\Generator as Faker;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,8 +14,15 @@ class TypeSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
-        //
+        $labels = ["HTML", "CSS 3", "JAVASCRIPT", "PHP", "GIT"];
+
+        foreach($labels as $label) {
+            $type = new Type();
+            $type->label = $label;
+            $type->color = $faker->hexColor();
+            $type->save();
+        }
     }
 }
