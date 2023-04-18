@@ -31,7 +31,7 @@ class ProjectController extends Controller
     public function create()
     {
         $project = new Project;
-        $types = Type::all();
+        $types = Type::orderBy('label')->get();
         return view('admin.projects.create', compact('project', 'types'));
     }
 
@@ -88,7 +88,7 @@ class ProjectController extends Controller
     public function edit(Project $project)
     {
 
-        $types = Type::all();
+        $types = Type::orderBy('label')->get();
         return view('admin.projects.edit', compact('project', 'types'));
     }
 
