@@ -24,6 +24,6 @@
          
 </div>
 </section>
-<a href="{{ route('admin.projects.index') }}" class="btn btn-primary my-5"> Torna alla lista </a>
+<a href="{{ route('admin.projects.index') }}" class="btn btn-primary my-5"> Torna alla lista</a>
 
 @endsection 
