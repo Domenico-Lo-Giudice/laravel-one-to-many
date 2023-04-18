@@ -12,6 +12,18 @@ class Project extends Model
 
     protected $fillable = ["title", "image", "text"];
 
+    // Relations
+
+    public function type() {
+        return $this->belongsTo(Type::class);
+    }
+
+
+
+    // ...
+
+
+
     public function getAbstract($max = 50) {
         return substr($this->text, 0, $max) . "...";
     }
