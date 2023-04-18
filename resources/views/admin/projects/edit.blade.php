@@ -29,10 +29,10 @@
 
         <div class="row mb-3">
             <div class="col-md-2 text-end">
-                <label for="title" class="form-label">Type</label>
+                <label for="type_id" class="form-label">Type</label>
             </div>
             <div class="col-md-10">
-                <select class="form-select">
+                <select name = "type_id" id = "type_id" class="form-select">
                     <option value="">Nessun Type</option>
                     @foreach ($types as $type)
                         <option value="{{ $type->id }}">{{ $type->label }}</option>
