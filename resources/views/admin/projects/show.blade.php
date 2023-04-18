@@ -5,7 +5,7 @@
 @section('content')
 <section class="card clearfix">
     <div class="card-body">
-        @dump($project->type?->color)
+        {{-- @dump($project->type?->color) --}}
     
 
 
