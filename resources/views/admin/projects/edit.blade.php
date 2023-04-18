@@ -32,7 +32,7 @@
                 <label for="type_id" class="form-label">Type</label>
             </div>
             <div class="col-md-10">
-                <select name = "type_id" id = "type_id" class="form-select">
+                <select name = "type_id" id = "type_id" class="form-select @error('type_id') is-invalid @enderror">
                     <option value="">Nessun Type</option>
                     @foreach ($types as $type)
                         <option value="{{ $type->id }}">{{ $type->label }}</option>

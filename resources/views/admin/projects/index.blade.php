@@ -21,8 +21,8 @@
         <thead>
             <tr>
               <th scope="col">Id</th>
-              <th scope="col">Type</th>
               <th scope="col">Titolo</th>
+              <th scope="col">Type</th>
               <th scope="col">Abstract</th>
             </tr>
           </thead>

@@ -106,6 +106,7 @@ class ProjectController extends Controller
 
         $request->validate([
             'image' => 'nullable|image|mimes:jpg,png,jpeg',
+            'type_id' => 'nullable|exists:types,id'
         ]);
 
         $data = $request->all();
