@@ -3,7 +3,12 @@
 @section('title', $project->title)
 
 @section('content')
-<section class="clearfix">
+<section class="card clearfix">
+    <div class="card-body">
+        @dump($project->type?->color)
+    
+
+
     <h2 class="text-muted text-secondary my-5"> {{ $project->slug }} </h2>
 
     <figure>
@@ -11,6 +16,7 @@
     </figure>
     
     <p>{{ $project->text }}</p>
+</div>
 </section>
 <a href="{{ route('admin.projects.index') }}" class="btn btn-primary my-5"> Torna alla lista </a>
 
